@@ -1,84 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Joshua Lyle</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Joshua Lyle Software Gameplay Game Play Engineer" name="keywords">
         <meta content="Joshua Lyle, Gameplay and Software Engineer" name="description">
-
-
-
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+        <style>
+            body {font-family: Arial;}
+            /* Style the tab */
+            .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            }
+            /* Style the buttons inside the tab */
+            .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            }
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+            background-color: #ddd;
+            }
+            /* Create an active/current tablink class */
+            .tab button.active {
+            background-color: #ccc;
+            }
+            /* Style the tab content */
+            .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            }
+        </style>
     </head>
-
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container-fluid">
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
-            </div>
+    <body>
+        <h2>Joshua Lyle</h2>
+        <p>Software Engineer, Gameplay Engineer, App Developer</p>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
+            <button class="tablinks" onclick="openCity(event, 'Resume')">Resume</button>
+            <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button>
+            <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button>
         </div>
-        <!-- Nav Bar End -->
-
-
-        <!-- Hero Start -->
-        <div class="hero" id="home">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <h1>Joshua Lyle</h1>
-                                <h2></h2>
-                                <div class="typed-text">Software Engineer, Gameplay Engineer, App Developer</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 d-none d-md-block">
-
-                    </div>
-                </div>
-            </div>
+        <div id="Home" class="tabcontent">
+            <h2>Home</h2>
+            <p>I am a software engineer based in Florida with a passion for developing video games and XR content.</p>
         </div>
-        <!-- Hero End -->
-
-
-        <!-- About Start -->
-        <div class="about" id="about">
+        <div id="Resume" class="tabcontent">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="about-content">
                             <div class="section-header text-left">
                                 <p></p>
-                                <h2>About Me</h2>
+                                <h2>Resume</h2>
                             </div>
                             <div class="about-text">
                                 <p>
-                                    Something about me
+                                    Tools and Skills Summary
                                 </p>
                             </div>
                             <div class="row">
@@ -89,6 +77,13 @@
                                         <li data-filter=".filter-3">Godot</li>
                                         <li data-filter=".filter-3">AR</li>
                                         <li data-filter=".filter-3">Multiplayer</li>
+                                        <li data-filter=".filter-3">C++</li>
+                                        <li data-filter=".filter-3">C#</li>
+                                        <li data-filter=".filter-3">Python</li>
+                                        <li data-filter=".filter-3">Java</li>
+                                        <li data-filter=".filter-3">Agile</li>
+                                        <li data-filter=".filter-3">Scrum</li>
+                                        <li data-filter=".filter-3">Kanban</li>
                                         <li data-filter=".filter-3">Game Development</li>
                                         <li data-filter=".filter-3">Gameplay Engineer</li>
                                         <li data-filter=".filter-3">Software Engineer</li>
@@ -96,35 +91,23 @@
                                 </div>
                             </div>
                             <div class = "cv-content">
-                                <a href="CV.pdf" download="JoshuaLyleCV"><p>Download CV</p></a>
+                                <a href="CV.pdf" download="JoshuaLyleCV">
+                                    <p>Download CV</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- About End -->
-
-
-        <!-- Portfolio Start -->
-        <div class="portfolio" id="portfolio">
+        <div id="Portfolio" class="tabcontent">
             <div class="container-fluid">
                 <h2>Portfolio</h2>
                 <h4>Space Ships</h4>
                 <a href="https://joshuasml.itch.io/space-ships">https://joshuasml.itch.io/space-ships</a>
             </div>
         </div>
-        <!-- Portfolio End -->
-
-  
-        <!-- Contact Start -->
-        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
-        </div>
-        <!-- Contact End -->
-
-
-        <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+        <div id="Contact" class="tabcontent">
             <div class="container-fluid">
                 <p></p>
                 <h2>Contact</h2>
@@ -141,43 +124,35 @@
                             <a href=""><i class="fab fa-youtube"></i></a>
                             <a href=""><i class="fab fa-instagram"></i></a>
                             <a href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>-->
+                            </div>-->
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <p></p>
                 <div class="container copyright">
                     <p>&copy; <a href="#">jpl25.github.io/joshualyle.github.io</a>, All Right Reserved
                 </div>
             </div>
         </div>
         <!-- Footer End -->
-        
-        
-        <!-- Back to top button -->
-        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
-        
-        
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
-        </div>
-
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/typed/typed.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
-
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+        <script>
+            function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+        </script>
     </body>
 </html>
