@@ -46,7 +46,7 @@
         <h2>Joshua Lyle</h2>
         <p>Software Engineer, Gameplay Engineer, App Developer</p>
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
+            <button class="tablinks" onclick="openCity(event, 'Home')" id = "defaultOpen">Home</button>
             <button class="tablinks" onclick="openCity(event, 'Resume')">Resume</button>
             <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button>
             <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button>
@@ -154,5 +154,9 @@
               evt.currentTarget.className += " active";
             }
         </script>
+        <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            </script>
     </body>
 </html>
