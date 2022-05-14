@@ -40,6 +40,24 @@
             border: 1px solid #ccc;
             border-top: none;
             }
+            table 
+            {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th 
+            {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) 
+            {
+                background-color: #dddddd;
+            }
         </style>
     </head>
     <body>
@@ -69,27 +87,8 @@
                                     Tools and Skills Summary
                                 </p>
                             </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <ul id="portfolio-filter">
-                                        <li data-filter=".filter-1">Unreal Engine</li>
-                                        <li data-filter=".filter-2">Unity</li>
-                                        <li data-filter=".filter-3">Godot</li>
-                                        <li data-filter=".filter-3">AR</li>
-                                        <li data-filter=".filter-3">Multiplayer</li>
-                                        <li data-filter=".filter-3">C++</li>
-                                        <li data-filter=".filter-3">C#</li>
-                                        <li data-filter=".filter-3">Python</li>
-                                        <li data-filter=".filter-3">Java</li>
-                                        <li data-filter=".filter-3">Agile</li>
-                                        <li data-filter=".filter-3">Scrum</li>
-                                        <li data-filter=".filter-3">Kanban</li>
-                                        <li data-filter=".filter-3">Game Development</li>
-                                        <li data-filter=".filter-3">Gameplay Engineer</li>
-                                        <li data-filter=".filter-3">Software Engineer</li>
-                                    </ul>
-                                </div>
-                            </div>
+
+                            <table id="slideContainer"></table>
                             <div class = "cv-content">
                                 <a href="CV.pdf" download="JoshuaLyleCV">
                                     <p>Download CV</p>
@@ -164,6 +163,75 @@
             </div>
         </div>
         <!-- Footer End -->
+        <script>
+            var tech = ['Unreal Engine', 'Unity', 'Godot','AR','Multiplayer','Visual Studio', 'Visual Studio Code']
+            var lang = ['C#','C++','Java','Python']
+            var skills = ['Agile', 'Scrum','Kanban','Game Develeopment','Gameplay Engineer','Software Engineer']
+            var str = '<tr><th>Tech</th><th>Languages</th><th>Skills</th></tr>'
+            var size
+
+            if(tech.length>lang.length)
+            {
+                if(tech.length>skills.length)
+                {
+                    size = tech.length
+                }
+                else
+                {
+                    size = skills.length
+                }
+            }
+            else
+            {
+                if(lang.length>skills.length)
+                {
+                    size = lang.length
+                }
+                else
+                {
+                    size = skills.length
+                }
+            }
+            for(let i = 0; i < size; i ++)
+            {
+                var line = ''
+                
+                if(i < tech.length)
+                {
+                    line += '<td>' + tech[i] + '</td>'
+                }
+                else
+                {
+                    line += '<td> </td>'
+                }
+
+                if(i < lang.length)
+                {
+                    line += '<td>' + lang[i] + '</td>'
+                }
+                else
+                {
+                    line += '<td> </td>'
+                }
+
+                if(i < skills.length)
+                {
+                    line += '<td>' + skills[i] + '</td>'
+                }
+                else
+                {
+                    line += '<td> </td>'
+                }
+
+                str += '<tr> ' + line + ' </tr>' 
+            }
+            // tech.forEach(function(item)
+            // {
+            //     str += '<li>'+ item + '</li>';
+            // });
+            str += '';
+            document.getElementById("slideContainer").innerHTML = str;
+        </script>
         <script>
             function openTab(evt, tabName) {
               var i, tabcontent, tablinks;
